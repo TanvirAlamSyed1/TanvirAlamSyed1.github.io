@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
+* {
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+body {
+    background: #424040;
+}
+
+.resume {
+    width: 80%;
+    background: #fefefe;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 25px auto;
+    display: flex;
+    border-color: #292b2f;
+}
+
+.centre {
+    width: 100%;
+}
+
+
+/* the above code is the main body of the web page^*/
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+.show1 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden,
+    .hidden1 {
+        transition: none;
+    }
+}
+
+
+/*this code is used to fade in stuff*/
+
+.header {
+    padding: 5% 5%;
+    margin-bottom: 2%;
+    height: 0%;
+    text-align: center;
+}
+
+.header .name {
+    font-size: 52px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #47b78e;
+}
+
+.header .role {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10%;
+    color: #292b2f;
+}
+
+
+/*this is the header section of the web page^*/
+
+.title {
+    font-size: 24pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-top: 10%;
+    color: #47b78e;
+    position: relative;
+    text-align: right;
+    margin-bottom: 5%;
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 30%;
+    height: 3px;
+    background: #47b78e;
+}
+
+
+/*title^*/
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    color: #292b2f;
+    display: inline-block;
+    border-radius: 10%;
+    background-origin: padding-box;
+    background-color: lightgray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 5%;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+
+/*this is how to keep items on the page seperate and in order with each other^*/
+
+.about {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 25%;
+    width: 80%;
+    position: center;
+    display: block;
+}
+
+.about .title:after {
+    content: "";
+    position: absolute;
+    top: 105%;
+    right: 0;
+    width: 70%;
+    height: 3px;
+    background: #47b78e;
+}
+
+
+/*this is the 'about' section of code^*/
+
+.skills {
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: 50%;
+    padding: 5%;
+}
+
+.skills .li_wrap {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.contact .li_wrap {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.skills .icon {
+    font-size: 150%;
+    color: #47b78e;
+}
+
+.contact .icon {
+    font-size: 250%;
+    color: #47b78e;
+}
+
+.skills ul,
+.contact ul {
+    margin-top: 5%;
+    padding: 10%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 5%;
+}
+
+.skills .li_wrap .text,
+.contact .li_wrap .text {
+    margin-top: 5px;
+    font-size: small;
+    color: #fff;
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+.contact .li_wrap .text {
+    font-size: x-small;
+}
+
+.skills .li_wrap:hover,
+.contact.li_wrap:hover {
+    opacity: 1;
+}
+
+.skills .li_wrap:hover .text,
+.contact .li_wrap:hover .text {
+    opacity: 1;
+    color: #47b78e;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+
+
+/*skills and contact section is all here ^*/
+
+.exp,
+.projects,
+.education,
+.contact {
+    border-radius: 20px;
+    background-origin: padding-box;
+    background-color: lightgray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 5%;
+}
+
+.exp .title,
+.education .title,
+.projects .title,
+.contact .title {
+    font-size: 36pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #47b78e;
+    position: relative;
+    text-align: right;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    padding-top: 1%;
+    right: 10%;
+}
+
+.exp .title:after,
+.education .title:after,
+.projects .title::after,
+.projects .title:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 20%;
+    height: 3px;
+    background: #47b78e;
+}
+
+.exp_wrap,
+.education_wrap {
+    padding: 5% 5%;
+    color: #292b2f;
+}
+
+.exp_wrap .li_wrap,
+.education_wrap .li_wrap {
+    display: flex;
+    margin-bottom: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.exp_wrap .li_wrap .date,
+.education_wrap .li_wrap .date {
+    width: 125px;
+    color: #47b78e;
+    font-size: larger;
+}
+
+.exp_wrap .li_wrap .info,
+.education_wrap .li_wrap .info {
+    width: calc(100% - 125px);
+    padding-left: 25px;
+    position: relative;
+}
+
+.exp_wrap .li_wrap .info_title,
+.education_wrap .li_wrap .info_title {
+    text-transform: uppercase;
+    font-size: 27pt;
+    letter-spacing: 2px;
+    color: #47b78e;
+}
+
+.exp_wrap .li_wrap .info_com,
+.education_wrap .li_wrap .info_com {
+    font-weight: 300;
+    font-size: 18pt;
+    font-style: oblique;
+}
+
+.exp_wrap .li_wrap .info_cont,
+.education_wrap .li_wrap .info_cont {
+    margin-top: 5px;
+    font-size: 16pt;
+}
+
+.exp_wrap .li_wrap .info:before,
+.education_wrap .li_wrap .info:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #47b78e;
+    border-radius: 50%;
+}
+
+.info_list li {
+    list-style-type: circle;
+    font-style: italic;
+    font-size: larger;
+}
+
+.exp_wrap .li_wrap .info:after,
+.education_wrap .li_wrap .info:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    width: 2px;
+    height: 90%;
+    background: #47b78e;
+}
+
+.extrainfo {
+    font-size: small;
+}
+
+.info .info_list {
+    font-size: medium;
+}
+
+
+/*experience & education section*/
+
+.slider-container {
+    max-width: 200%;
+    width: 100%;
+}
+
+.slider-content {
+    margin: 0 5%;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 150%;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    height: 300px;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #707070;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #47b78e;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 14px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2b7055;
+}
+
+.swiper-navBtn {
+    color: #47b78e;
+    transition: all 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: #2b7055;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #47b78e;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #2b7055;
+}
+
+
+/*project section */
+
+@media (max-width: 1250px) {
+    .resume {
+        width: 90%;
+        background: #fefefe;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        margin: 25px auto;
+        display: flex;
+        border-color: #292b2f;
+    }
+    .header .name {
+        font-size: 35px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #47b78e;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-child {
+        flex: 1;
+        color: #292b2f;
+        display: inline-flex;
+        border-radius: 10%;
+        background-origin: padding-box;
+        background-color: lightgray;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        margin: 5%;
+    }
+    .flex-child:first-child {
+        margin-right: 5%;
+    }
+    /*this is how to keep items on the page seperate and in order with each other^*/
+    .about {
+        margin: 10%;
+        width: 80%;
+        padding: auto;
+        position: center;
+        display: block;
+    }
+    .about .title:after {
+        content: "";
+        position: absolute;
+        top: 105%;
+        right: 0;
+        width: 70%;
+        height: 3px;
+        background: #47b78e;
+    }
+    /*about section of code*/
+    .description {
+        font-size: 12px;
+        font-weight: 400;
+        color: #707070;
+        text-align: center;
+    }
+}

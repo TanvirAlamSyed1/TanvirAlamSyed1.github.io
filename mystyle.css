@@ -552,6 +552,10 @@ body {
         margin-bottom: 10%;
         color: #292b2f;
     }
+    .flex-container {
+        margin-top: 20%;
+    }
+    
     .skills {
         margin-right: 10%;
         margin-left: 10%;

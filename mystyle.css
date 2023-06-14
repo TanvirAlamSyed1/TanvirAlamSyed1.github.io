@@ -293,7 +293,7 @@ body {
 
 .exp_wrap .li_wrap .date,
 .education_wrap .li_wrap .date {
-    width: 100px;
+    width: 25%;
     color: #47b78e;
     font-size: larger;
 }
